@@ -45,6 +45,15 @@ Oppna [http://localhost:3000](http://localhost:3000).
 - `npm run start` - startar produktionsserver
 - `npm run lint` - kor ESLint
 
+## Deploy (Vercel)
+
+- Importera repot i Vercel och deploya branch `main`.
+- Satt miljo variabeln `NEXT_PUBLIC_SITE_URL` till din publika doman (ex. `https://jarnkirurgen.se`).
+- Projektet genererar automatiskt:
+  - `robots.txt` via `src/app/robots.ts`
+  - `sitemap.xml` via `src/app/sitemap.ts`
+  - Open Graph/Twitter metadata via `src/app/layout.tsx`
+
 ## Designnoteringar
 
 - Mork premiumlayout med glas/frosted-kansla i navigation.

@@ -10,10 +10,37 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jarnkirurgen.se";
+
 export const metadata: Metadata = {
   title: "Järnkirurgen",
   description:
     "Avancerad svetsteknik i Vilhelmina med fokus på kvalitet, finish och tillförlitlighet.",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "Järnkirurgen",
+    description:
+      "Avancerad svetsteknik i Vilhelmina med fokus på kvalitet, finish och tillförlitlighet.",
+    url: "/",
+    siteName: "Järnkirurgen",
+    locale: "sv_SE",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/welderbg.png",
+        width: 1200,
+        height: 630,
+        alt: "Järnkirurgen - Avancerad svetsteknik",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Järnkirurgen",
+    description:
+      "Avancerad svetsteknik i Vilhelmina med fokus på kvalitet, finish och tillförlitlighet.",
+    images: ["/assets/images/welderbg.png"],
+  },
 };
 
 export default function RootLayout({
