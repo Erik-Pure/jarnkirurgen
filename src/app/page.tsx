@@ -2,18 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Activity, Flame, ScanSearch, Wrench } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
 
 export default function Home() {
   return (
     <main className="bg-tech-gradient">
+      <ScrollFadeCornerImage
+        src="/assets/images/jkherobg.png"
+        className="pointer-events-none absolute right-0 -top-28 hidden h-[92vh] w-full md:block max-[1080px]:top-8 max-[1080px]:h-[76vh] max-[1080px]:w-[82%]"
+        fadeDistance={760}
+      />
       <AnimatedSection
         className="relative mx-auto w-full max-w-6xl overflow-hidden px-4 pt-16 pb-20 md:min-h-[58vh] md:px-6 md:pt-20"
       >
-        <div
-          className="pointer-events-none absolute right-0 -top-8 hidden h-full w-[44%] bg-contain bg-right-top bg-no-repeat opacity-85 md:block"
-          style={{ backgroundImage: "url('/assets/images/welderbg.png')" }}
-        />
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] bg-gradient-to-l from-black/38 via-black/24 to-transparent md:block" />
         <div className="relative z-10 max-w-3xl text-center md:text-left">
           <p className="mx-auto inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs text-[#8e8d91] md:mx-0">
             AVANCERAD SVETSTEKNIK
@@ -174,7 +175,7 @@ export default function Home() {
                 href="/licenser"
                 className="mt-6 inline-flex rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-medium text-white transition hover:bg-white/10"
               >
-                Se våra licenser
+                Se licenser
               </Link>
             </div>
 
@@ -209,7 +210,7 @@ export default function Home() {
 
       <AnimatedSection className="mx-auto w-full max-w-6xl px-4 pb-24 md:px-6" delayMs={160}>
         <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-[#8e8d91]">
-          OM OSS
+          OM FÖRETAGET
         </p>
         <div className="grid gap-4 lg:grid-cols-[1.05fr_1.1fr]">
           <article className="soft-grid relative flex min-h-[40rem] flex-col overflow-hidden p-8">
@@ -231,7 +232,7 @@ export default function Home() {
               href="/om-oss"
               className="relative mt-6 inline-flex w-fit rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#e5e9ff]"
             >
-              Om oss
+              Om företaget
             </Link>
           </article>
 

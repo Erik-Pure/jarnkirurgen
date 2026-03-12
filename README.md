@@ -14,7 +14,7 @@ Modern hemsida for Jarnkirurgen byggd med Next.js (App Router), TypeScript och T
 
 - `src/app/page.tsx` - startsida
 - `src/app/vara-tjanster/page.tsx` - vara tjanster
-- `src/app/om-oss/page.tsx` - om oss
+- `src/app/om-oss/page.tsx` - om foretaget
 - `src/app/licenser/page.tsx` - licenser
 - `src/app/kontakt/page.tsx` - kontakt
 - `src/app/layout.tsx` - global layout, desktop/mobilnavigation, footer

@@ -1,13 +1,20 @@
 import Link from "next/link";
 import { BadgeCheck, BriefcaseBusiness } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
 
 export default function AboutPage() {
   return (
-    <main className="bg-tech-gradient">
+    <main className="relative bg-tech-gradient">
+      <ScrollFadeCornerImage
+        src="/assets/images/konradbg.png"
+        className="pointer-events-none absolute right-0 -top-28 hidden h-[92vh] w-full md:block"
+        fadeDistance={760}
+        maxOpacity={0.62}
+      />
       <AnimatedSection className="mx-auto min-h-[calc(100vh-134px)] w-full max-w-6xl px-4 py-14 md:px-6">
         <p className="mb-4 text-center text-xs font-semibold tracking-[0.3em] text-[#8e8d91] md:text-left">
-          OM OSS
+          OM FÖRETAGET
         </p>
         <h1 className="heading-font mx-auto max-w-3xl text-center text-4xl leading-tight text-white sm:text-5xl md:mx-0 md:text-left md:text-7xl">
           Erfarenhet, utbildning och hantverk i varje detalj

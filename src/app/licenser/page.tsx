@@ -1,4 +1,5 @@
 import AnimatedSection from "@/components/AnimatedSection";
+import { BadgeCheck, Flame, ShieldCheck, Wrench } from "lucide-react";
 
 const licenses = [
   ["EN287-1", "111", "P", "BW", "W01/1.1", "6", "-", "PF"],
@@ -23,6 +24,33 @@ const columns = [
   "Tjocklek",
   "Diameter",
   "Läge",
+];
+
+const methodCards = [
+  {
+    title: "TIG-svetsning",
+    description:
+      "Expertis inom precisionssvetsning för rostfritt stål, aluminium och tunnväggiga material.",
+    icon: Wrench,
+  },
+  {
+    title: "MIG/MAG-svetsning",
+    description:
+      "Effektiv och stark sammanfogning av allt från tunnplåt till grova stålkonstruktioner.",
+    icon: Flame,
+  },
+  {
+    title: "MMA (Pinnsvetsning)",
+    description:
+      "Robust metod för montage och reparationer, optimerad för både verkstad och utomhusarbeten.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Heta Arbeten",
+    description:
+      "Certifierad behörighet som garanterar ett brandsäkert och försäkringsgodkänt utförande på plats hos kund.",
+    icon: ShieldCheck,
+  },
 ];
 
 export default function LicensesPage() {
@@ -94,6 +122,30 @@ export default function LicensesPage() {
               ))}
             </tbody>
           </table>
+        </AnimatedSection>
+
+        <AnimatedSection className="mt-14" delayMs={120}>
+          <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-[#8e8d91]">
+            CERTIFIKAT
+          </p>
+          <div className="soft-grid grid overflow-hidden md:grid-cols-2">
+            {methodCards.map(({ title, description, icon: Icon }, index) => (
+              <article
+                key={title}
+                className={`border-white/10 p-8 ${
+                  index < 2 ? "border-b" : ""
+                } ${index % 2 === 0 ? "md:border-r" : ""}`}
+              >
+                <span className="inline-flex rounded-full border border-white/35 bg-white/6 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_24px_rgba(255,255,255,0.07)]">
+                  <Icon className="h-4 w-4 text-[#dbe4ff]" />
+                </span>
+                <h2 className="mt-4 text-xl font-medium leading-tight text-white">
+                  {title}
+                </h2>
+                <p className="body-muted mt-3">{description}</p>
+              </article>
+            ))}
+          </div>
         </AnimatedSection>
       </AnimatedSection>
     </main>

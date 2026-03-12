@@ -15,7 +15,7 @@ Sidan ska kommunicera kvalitet, kompetens och forenkla kontakt med nya kunder.
 
 - Startsida (`/`)
 - Vara tjanster (`/vara-tjanster`)
-- Om oss (`/om-oss`)
+- Om foretaget (`/om-oss`)
 - Kontakt (`/kontakt`)
 
 ## 4. Innehall och budskap (utkast)
@@ -42,7 +42,7 @@ Sidan ska kommunicera kvalitet, kompetens och forenkla kontakt med nya kunder.
   - Underhall
   - Specialanpassade uppdrag
 
-### Om oss
+### Om foretaget
 
 - Kort foretagsbeskrivning.
 - Fokus pa kvalitet, finish och tillforlitlighet.

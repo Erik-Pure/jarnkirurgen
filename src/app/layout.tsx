@@ -111,7 +111,7 @@ export default function RootLayout({
                 <ul className="space-y-2">
                   <li>
                     <Link className="transition hover:text-white" href="/om-oss">
-                      Om oss
+                      Om företaget
                     </Link>
                   </li>
                   <li>

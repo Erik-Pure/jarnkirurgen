@@ -6,7 +6,7 @@ import { BadgeCheck, BriefcaseBusiness, Hammer, House, Phone } from "lucide-reac
 
 const links = [
   { href: "/vara-tjanster", label: "Våra tjänster", short: "Tjänster", icon: Hammer },
-  { href: "/om-oss", label: "Om oss", short: "Om oss", icon: BriefcaseBusiness },
+  { href: "/om-oss", label: "Om företaget", short: "Företaget", icon: BriefcaseBusiness },
   { href: "/licenser", label: "Licenser", short: "Licenser", icon: BadgeCheck },
   { href: "/kontakt", label: "Kontakt", short: "Kontakt", icon: Phone },
 ];
