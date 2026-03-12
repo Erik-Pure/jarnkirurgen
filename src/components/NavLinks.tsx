@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { BadgeCheck, BriefcaseBusiness, Hammer, House, Phone } from "lucide-react";
 
 const links = [
@@ -60,9 +61,37 @@ export function DesktopNavLinks() {
 
 export function MobileBottomNav() {
   const pathname = usePathname();
+  const [bottomOffset, setBottomOffset] = useState(0);
+
+  useEffect(() => {
+    const viewport = window.visualViewport;
+    if (!viewport) return;
+
+    const updateOffset = () => {
+      const offset = Math.max(
+        0,
+        Math.round(window.innerHeight - viewport.height - viewport.offsetTop),
+      );
+      setBottomOffset(offset);
+    };
+
+    updateOffset();
+    viewport.addEventListener("resize", updateOffset);
+    viewport.addEventListener("scroll", updateOffset);
+    window.addEventListener("orientationchange", updateOffset);
+
+    return () => {
+      viewport.removeEventListener("resize", updateOffset);
+      viewport.removeEventListener("scroll", updateOffset);
+      window.removeEventListener("orientationchange", updateOffset);
+    };
+  }, []);
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-white/15 bg-[#06080fb3] px-4 py-3 backdrop-blur-xl md:hidden">
+    <nav
+      className="fixed inset-x-0 z-50 border-t border-white/15 bg-[#06080fb3] px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-xl md:hidden"
+      style={{ bottom: `${bottomOffset}px` }}
+    >
       <ul className="mx-auto flex max-w-6xl items-center justify-around text-xs font-medium">
         {mobileLinks.map((item) => {
           const active = isActivePath(pathname, item.href);

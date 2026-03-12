@@ -50,7 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body className={`${inter.variable} pb-24 antialiased md:pb-0`}>
+      <body
+        className={`${inter.variable} pb-[calc(6rem+env(safe-area-inset-bottom))] antialiased md:pb-0`}
+      >
         <header className="sticky top-0 z-50 px-0 pt-0 md:px-6 md:pt-4">
           <nav className="mx-auto flex w-full max-w-6xl items-center justify-center rounded-b-[22px] border border-white/15 border-t-0 bg-[#06080f99] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl md:justify-between md:rounded-[22px] md:border-t">
             <Link href="/" className="flex items-center gap-3 md:mx-0">
