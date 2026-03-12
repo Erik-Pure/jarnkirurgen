@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="bg-tech-gradient">
       <AnimatedSection
-        className="relative mx-auto w-full max-w-6xl overflow-hidden px-4 pt-16 pb-4 md:min-h-[58vh] md:px-6 md:pt-20"
+        className="relative mx-auto w-full max-w-6xl overflow-hidden px-4 pt-16 pb-20 md:min-h-[58vh] md:px-6 md:pt-20"
       >
         <div
           className="pointer-events-none absolute right-0 -top-8 hidden h-full w-[44%] bg-contain bg-right-top bg-no-repeat opacity-85 md:block"

@@ -69,7 +69,7 @@ export default function LicensesPage() {
         </AnimatedSection>
 
         <AnimatedSection
-          className="glass-card mt-8 hidden overflow-x-auto rounded-xl md:block"
+          className="glass-card mt-16 hidden overflow-x-auto rounded-xl md:block"
           delayMs={80}
         >
           <table className="min-w-full text-sm">

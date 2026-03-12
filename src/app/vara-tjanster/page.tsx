@@ -49,7 +49,7 @@ export default function ServicesPage() {
         </p>
 
         <AnimatedSection
-          className="mt-10 soft-grid grid overflow-hidden md:grid-cols-2 lg:grid-cols-3"
+          className="mt-20 soft-grid grid overflow-hidden md:grid-cols-2 lg:grid-cols-3"
           delayMs={60}
         >
           {coreServices.map(({ title, icon: Icon }, index) => (

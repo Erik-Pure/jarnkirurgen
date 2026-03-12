@@ -8,7 +8,7 @@ export default function ContactPage() {
           Kontakt
         </h1>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-2">
+        <div className="mt-20 grid gap-8 lg:grid-cols-2">
           <AnimatedSection className="glass-card rounded-xl p-6" delayMs={70}>
             <h2 className="heading-font text-2xl text-white">Kontaktuppgifter</h2>
             <div className="mt-4 space-y-2 text-lg text-[#8e8d91]">

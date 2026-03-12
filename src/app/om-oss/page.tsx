@@ -18,7 +18,7 @@ export default function AboutPage() {
           hög kvalitet, teknisk noggrannhet och professionellt utförande.
         </p>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+        <div className="mt-20 grid gap-4 lg:grid-cols-2">
           <AnimatedSection className="soft-grid p-8" delayMs={70}>
             <span className="inline-flex rounded-full border border-white/35 bg-white/6 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_24px_rgba(255,255,255,0.07)]">
               <BadgeCheck className="h-4 w-4 text-[#dbe4ff]" />
@@ -60,7 +60,7 @@ export default function AboutPage() {
           </AnimatedSection>
         </div>
 
-        <AnimatedSection className="mt-10" delayMs={140}>
+        <AnimatedSection className="mt-16" delayMs={140}>
           <Link
             href="/kontakt"
             className="inline-flex rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-medium text-white transition hover:bg-white/10"
