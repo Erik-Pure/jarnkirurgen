@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "TIG",
     "MIG/MAG",
     "MMA",
+    "Heta Arbeten",
+    "certifierad svetsning",
+    "svetslicenser",
     "reparationssvetsning",
     "Vilhelmina",
     "Järnkirurgen",
@@ -76,11 +79,54 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Järnkirurgen",
+    image: `${siteUrl}/assets/logo/logo-horisontal.svg`,
+    url: siteUrl,
+    telephone: "+46706527770",
+    email: "konrad@jarnkirurgen.se",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Nästansjö 610",
+      postalCode: "912 92",
+      addressLocality: "Vilhelmina",
+      addressCountry: "SE",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Vilhelmina",
+    },
+    knowsAbout: [
+      "TIG-svetsning",
+      "MIG/MAG-svetsning",
+      "MMA (pinnsvetsning)",
+      "Rörsvetsning",
+      "Reparationssvetsning",
+      "Sprickindikering",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Heta Arbeten",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Svetslicenser (urval enligt EN287-1 och SS ISO 9606-2)",
+      },
+    ],
+  };
+
   return (
     <html lang="sv">
       <body
         className={`${inter.variable} pb-[calc(6rem+env(safe-area-inset-bottom))] antialiased md:pb-0`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <header className="sticky top-0 z-50 px-0 pt-0 md:px-6 md:pt-4">
           <nav className="mx-auto flex w-full max-w-6xl items-center justify-center rounded-b-[22px] border border-white/15 border-t-0 bg-[#06080f99] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl md:justify-between md:rounded-[22px] md:border-t md:py-3">
             <Link href="/" className="flex items-center gap-3 md:mx-0">

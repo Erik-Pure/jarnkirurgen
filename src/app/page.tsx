@@ -8,14 +8,14 @@ import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
 export const metadata: Metadata = {
   title: "Avancerad svetsteknik i Vilhelmina",
   description:
-    "Järnkirurgen utför svetsmekaniska arbeten med hög kvalitet och finish. Partner för kvalificerad svetsning, reparation och utveckling.",
+    "Järnkirurgen i Vilhelmina erbjuder TIG, MIG/MAG och MMA samt certifierade arbeten inklusive Heta Arbeten och kvalificerad reparationssvetsning.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Järnkirurgen - Avancerad svetsteknik i Vilhelmina",
     description:
-      "Svetsmekaniska arbeten med hög kvalitet och finish för företag och privatpersoner.",
+      "TIG, MIG/MAG, MMA och certifierade svetsarbeten i Vilhelmina.",
     url: "/",
     images: ["/assets/images/jkherobg.png"],
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Järnkirurgen - Avancerad svetsteknik i Vilhelmina",
     description:
-      "Svetsmekaniska arbeten med hög kvalitet och finish för företag och privatpersoner.",
+      "TIG, MIG/MAG, MMA och certifierade svetsarbeten i Vilhelmina.",
     images: ["/assets/images/jkherobg.png"],
   },
 };
