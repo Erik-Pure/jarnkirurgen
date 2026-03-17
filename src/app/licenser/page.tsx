@@ -1,5 +1,27 @@
+import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BadgeCheck, Flame, ShieldCheck, Wrench } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Licenser och certifikat",
+  description:
+    "Översikt av tidigare svetslicenser och certifikat inom TIG, MIG/MAG, MMA och Heta Arbeten.",
+  alternates: {
+    canonical: "/licenser",
+  },
+  openGraph: {
+    title: "Licenser och certifikat - Järnkirurgen",
+    description:
+      "Dokumenterad kompetens inom flera svetsmetoder och certifierade arbetsmoment.",
+    url: "/licenser",
+  },
+  twitter: {
+    card: "summary",
+    title: "Licenser och certifikat - Järnkirurgen",
+    description:
+      "Dokumenterad kompetens inom flera svetsmetoder och certifierade arbetsmoment.",
+  },
+};
 
 const licenses = [
   ["EN287-1", "111", "P", "BW", "W01/1.1", "6", "-", "PF"],

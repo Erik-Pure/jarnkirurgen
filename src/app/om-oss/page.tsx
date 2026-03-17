@@ -1,11 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { BadgeCheck, BriefcaseBusiness } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
 
+export const metadata: Metadata = {
+  title: "Om företaget",
+  description:
+    "Läs om Konrad Edman, Järnkirurgens bakgrund, utbildning och erfarenhet från industrin sedan 2008.",
+  alternates: {
+    canonical: "/om-oss",
+  },
+  openGraph: {
+    title: "Om företaget - Järnkirurgen",
+    description:
+      "Erfarenhet, utbildning och hantverk i varje detalj. Järnkirurgen i Vilhelmina.",
+    url: "/om-oss",
+    images: ["/assets/images/konradbg.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Om företaget - Järnkirurgen",
+    description:
+      "Erfarenhet, utbildning och hantverk i varje detalj. Järnkirurgen i Vilhelmina.",
+    images: ["/assets/images/konradbg.png"],
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="relative bg-tech-gradient">
+      <div
+        className="pointer-events-none absolute top-0 right-0 z-0 h-[62vh] w-[80vw] bg-contain bg-right-top bg-no-repeat opacity-20 md:hidden"
+        style={{ backgroundImage: "url('/assets/images/konradbg.png')" }}
+      />
       <ScrollFadeCornerImage
         src="/assets/images/konradbg.png"
         className="pointer-events-none absolute right-0 -top-28 hidden h-[92vh] w-full md:block"
@@ -13,17 +41,21 @@ export default function AboutPage() {
         maxOpacity={0.62}
       />
       <AnimatedSection className="mx-auto min-h-[calc(100vh-134px)] w-full max-w-6xl px-4 py-14 md:px-6">
-        <p className="mb-4 text-center text-xs font-semibold tracking-[0.3em] text-[#8e8d91] md:text-left">
-          OM FÖRETAGET
-        </p>
-        <h1 className="heading-font mx-auto max-w-3xl text-center text-4xl leading-tight text-white sm:text-5xl md:mx-0 md:text-left md:text-7xl">
-          Erfarenhet, utbildning och hantverk i varje detalj
-        </h1>
-        <p className="body-muted mx-auto mt-5 max-w-4xl text-center text-lg leading-relaxed md:mx-0 md:text-left">
-          Jag heter Konrad Edman och driver Järnkirurgen i Vilhelmina. Företaget
-          startade våren 2008 med målet att erbjuda svetsmekaniska arbeten med
-          hög kvalitet, teknisk noggrannhet och professionellt utförande.
-        </p>
+        <div className="relative overflow-hidden">
+          <div className="relative z-10">
+            <p className="mb-4 text-center text-xs font-semibold tracking-[0.3em] text-[#8e8d91] md:text-left">
+              OM FÖRETAGET
+            </p>
+            <h1 className="heading-font mx-auto max-w-3xl text-center text-4xl leading-tight text-white sm:text-5xl md:mx-0 md:text-left md:text-7xl">
+              Erfarenhet, utbildning och hantverk i varje detalj
+            </h1>
+            <p className="body-muted mx-auto mt-5 max-w-4xl text-center text-lg leading-relaxed md:mx-0 md:text-left">
+              Jag heter Konrad Edman och driver Järnkirurgen i Vilhelmina. Företaget
+              startade våren 2008 med målet att erbjuda svetsmekaniska arbeten med
+              hög kvalitet, teknisk noggrannhet och professionellt utförande.
+            </p>
+          </div>
+        </div>
 
         <div className="mt-20 grid gap-4 lg:grid-cols-2">
           <AnimatedSection className="soft-grid p-8" delayMs={70}>

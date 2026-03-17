@@ -1,4 +1,26 @@
+import type { Metadata } from "next";
 import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Kontakta Järnkirurgen i Vilhelmina för svetsmekaniska uppdrag. Telefon 070-652 77 70 eller e-post konrad@jarnkirurgen.se.",
+  alternates: {
+    canonical: "/kontakt",
+  },
+  openGraph: {
+    title: "Kontakt - Järnkirurgen",
+    description:
+      "Ta kontakt för offert eller första dialog om ditt svets- och reparationsuppdrag.",
+    url: "/kontakt",
+  },
+  twitter: {
+    card: "summary",
+    title: "Kontakt - Järnkirurgen",
+    description:
+      "Ta kontakt för offert eller första dialog om ditt svets- och reparationsuppdrag.",
+  },
+};
 
 export default function ContactPage() {
   return (

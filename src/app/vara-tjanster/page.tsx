@@ -1,6 +1,30 @@
+import type { Metadata } from "next";
 import { Activity, BadgeCheck, Flame, ScanSearch, Waves, Wrench } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
+
+export const metadata: Metadata = {
+  title: "Våra tjänster",
+  description:
+    "Tjänster inom sprickindikering, rörsvetsning, påläggssvetsning, hårdsvetsning, reparationssvetsning och hård- och mjuklödning.",
+  alternates: {
+    canonical: "/vara-tjanster",
+  },
+  openGraph: {
+    title: "Våra tjänster - Järnkirurgen",
+    description:
+      "Kvalificerade svetsmekaniska tjänster för krävande uppdrag inom industri och reparation.",
+    url: "/vara-tjanster",
+    images: ["/assets/images/weldingbg.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Våra tjänster - Järnkirurgen",
+    description:
+      "Kvalificerade svetsmekaniska tjänster för krävande uppdrag inom industri och reparation.",
+    images: ["/assets/images/weldingbg.png"],
+  },
+};
 
 export default function ServicesPage() {
   const coreServices = [
@@ -65,23 +89,31 @@ export default function ServicesPage() {
 
   return (
     <main className="relative bg-tech-gradient">
+      <div
+        className="pointer-events-none absolute top-0 right-0 z-0 h-[62vh] w-[80vw] bg-contain bg-right-top bg-no-repeat opacity-20 md:hidden"
+        style={{ backgroundImage: "url('/assets/images/weldingbg.png')" }}
+      />
       <ScrollFadeCornerImage
         src="/assets/images/weldingbg.png"
         className="pointer-events-none absolute right-0 -top-16 hidden h-[88vh] w-full md:block"
         fadeDistance={760}
       />
       <AnimatedSection className="mx-auto min-h-[calc(100vh-134px)] w-full max-w-6xl px-4 py-14 md:px-6">
-        <p className="mb-4 text-center text-xs font-semibold tracking-[0.3em] text-[#8e8d91] md:text-left">
-          VÅRA TJÄNSTER
-        </p>
-        <h1 className="heading-font mx-auto max-w-3xl text-center text-4xl leading-tight text-white sm:text-5xl md:mx-0 md:text-left md:text-7xl">
-          Svetsmekaniska tjänster för krävande uppdrag
-        </h1>
-        <p className="body-muted mx-auto mt-5 max-w-3xl text-center text-lg md:mx-0 md:text-left">
-          Vi utför svetsmekaniska arbeten för både nya konstruktioner och
-          kvalificerade reparationer där kvalitet, precision och hållbarhet är
-          avgörande.
-        </p>
+        <div className="relative overflow-hidden">
+          <div className="relative z-10">
+            <p className="mb-4 text-center text-xs font-semibold tracking-[0.3em] text-[#8e8d91] md:text-left">
+              VÅRA TJÄNSTER
+            </p>
+            <h1 className="heading-font mx-auto max-w-3xl text-center text-4xl leading-tight text-white sm:text-5xl md:mx-0 md:text-left md:text-7xl">
+              Svetsmekaniska tjänster för krävande uppdrag
+            </h1>
+            <p className="body-muted mx-auto mt-5 max-w-3xl text-center text-lg md:mx-0 md:text-left">
+              Vi utför svetsmekaniska arbeten för både nya konstruktioner och
+              kvalificerade reparationer där kvalitet, precision och hållbarhet är
+              avgörande.
+            </p>
+          </div>
+        </div>
 
         <AnimatedSection
           className="mt-20 soft-grid grid overflow-hidden md:grid-cols-2 lg:grid-cols-3"

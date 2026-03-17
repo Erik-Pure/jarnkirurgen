@@ -1,15 +1,43 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Activity, Flame, ScanSearch, Wrench } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import ScrollFadeCornerImage from "@/components/ScrollFadeCornerImage";
 
+export const metadata: Metadata = {
+  title: "Avancerad svetsteknik i Vilhelmina",
+  description:
+    "Järnkirurgen utför svetsmekaniska arbeten med hög kvalitet och finish. Partner för kvalificerad svetsning, reparation och utveckling.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Järnkirurgen - Avancerad svetsteknik i Vilhelmina",
+    description:
+      "Svetsmekaniska arbeten med hög kvalitet och finish för företag och privatpersoner.",
+    url: "/",
+    images: ["/assets/images/jkherobg.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Järnkirurgen - Avancerad svetsteknik i Vilhelmina",
+    description:
+      "Svetsmekaniska arbeten med hög kvalitet och finish för företag och privatpersoner.",
+    images: ["/assets/images/jkherobg.png"],
+  },
+};
+
 export default function Home() {
   return (
-    <main className="bg-tech-gradient">
+    <main className="relative bg-tech-gradient">
+      <div
+        className="pointer-events-none absolute top-0 right-0 z-0 h-[62vh] w-[80vw] bg-contain bg-right-top bg-no-repeat opacity-20 md:hidden"
+        style={{ backgroundImage: "url('/assets/images/jkherobg.png')" }}
+      />
       <ScrollFadeCornerImage
         src="/assets/images/jkherobg.png"
-        className="pointer-events-none absolute right-0 -top-28 hidden h-[92vh] w-full md:block max-[1080px]:top-8 max-[1080px]:h-[76vh] max-[1080px]:w-[82%]"
+        className="pointer-events-none absolute top-0 right-0 hidden h-[92vh] w-full md:block max-[1080px]:h-[76vh] max-[1080px]:w-[82%]"
         fadeDistance={760}
       />
       <AnimatedSection
