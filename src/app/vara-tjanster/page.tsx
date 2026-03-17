@@ -95,7 +95,7 @@ export default function ServicesPage() {
       />
       <ScrollFadeCornerImage
         src="/assets/images/weldingbg.png"
-        className="pointer-events-none absolute right-0 -top-16 hidden h-[88vh] w-full md:block"
+        className="pointer-events-none fixed top-0 right-0 hidden h-[88vh] w-full md:block"
         fadeDistance={760}
       />
       <AnimatedSection className="mx-auto min-h-[calc(100vh-134px)] w-full max-w-6xl px-4 py-14 md:px-6">

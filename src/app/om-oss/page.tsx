@@ -36,7 +36,7 @@ export default function AboutPage() {
       />
       <ScrollFadeCornerImage
         src="/assets/images/konradbg.png"
-        className="pointer-events-none absolute right-0 -top-28 hidden h-[92vh] w-full md:block"
+        className="pointer-events-none fixed top-0 right-0 hidden h-[92vh] w-full md:block"
         fadeDistance={760}
         maxOpacity={0.62}
       />

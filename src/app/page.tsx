@@ -33,11 +33,11 @@ export default function Home() {
     <main className="relative bg-tech-gradient">
       <div
         className="pointer-events-none absolute top-0 right-0 z-0 h-[62vh] w-[80vw] bg-contain bg-right-top bg-no-repeat opacity-20 md:hidden"
-        style={{ backgroundImage: "url('/assets/images/jkherobg.png')" }}
+        style={{ backgroundImage: "url('/assets/images/jkherobg-v2.png')" }}
       />
       <ScrollFadeCornerImage
-        src="/assets/images/jkherobg.png"
-        className="pointer-events-none absolute top-0 right-0 hidden h-[92vh] w-full md:block max-[1080px]:h-[76vh] max-[1080px]:w-[82%]"
+        src="/assets/images/jkherobg-v2.png"
+        className="pointer-events-none fixed top-0 right-0 hidden h-[92vh] w-full md:block max-[1080px]:h-[76vh] max-[1080px]:w-[82%]"
         fadeDistance={760}
       />
       <AnimatedSection
